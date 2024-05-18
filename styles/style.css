@@ -47,7 +47,7 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 711px 399px;
-  grid-template-rows: 534px;
+  grid-template-rows: auto;
   align-items: end;
   gap: 30px;
 }
@@ -55,7 +55,7 @@ ol {
 .result {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 54px;
+  grid-template-rows: auto auto;
   gap: 16px;
 }
 
@@ -87,7 +87,7 @@ ol {
 .content__details {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 298px;
+  grid-template-rows: auto auto;
   gap: 26px;
 }
 
@@ -106,9 +106,8 @@ ol {
 .content__list {
   position: relative;
   overflow: auto;
-  max-height: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  height: 298px;
 }
 
 .content__list-item {
@@ -116,11 +115,10 @@ ol {
 }
 
 .content__list-item:focus {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline: none;
 }
 
-.contentlist-item:last-child {
+.content__list-item:last-child {
   margin-bottom: 0;
 }
 
@@ -138,7 +136,7 @@ ol {
 .content__card-link:hover {
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  text-underline-offset: 5px;
+  text-underline-offset: 2px;
 }
 
 .content__card-link:active {
@@ -151,6 +149,10 @@ ol {
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -171,7 +173,7 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  object-fit: fill;
+  object-fit: cover;
   padding: 2px;
 }
 
@@ -189,6 +191,8 @@ ol {
   display: flex;
   width: fit-content;
   gap: 5px;
+  align-items: center;
+  cursor: pointer;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -201,7 +205,7 @@ ol {
   margin-left: 3px;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -241,7 +245,7 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: flex;
   outline: 1px solid #fff;
   outline-offset: 2px;
   height: 15px;
@@ -263,7 +267,7 @@ ol {
   text-align: center;
   color: #fff;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
 }
 
 .button:active {
