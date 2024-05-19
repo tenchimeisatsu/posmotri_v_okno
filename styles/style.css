@@ -149,7 +149,7 @@ ol {
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
-  max-width: 190px;
+  max-width: 188px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -166,7 +166,7 @@ ol {
 }
 
 .content__video-card-description-container {
-  width: 190px;
+  width: 188px;
   padding: 2px;
 }
 
@@ -296,7 +296,7 @@ ol {
 
 .more-button {
   height: 34px;
-  width: 384px;
+  width: 382px;
 }
 
 .content__card-link_current {
